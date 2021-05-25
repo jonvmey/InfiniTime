@@ -650,6 +650,10 @@ set(INCLUDE_FILES
 include_directories(
         .
         ../
+)
+
+include_directories(
+        SYSTEM
         libs/
         FreeRTOS/
         libs/date/includes
