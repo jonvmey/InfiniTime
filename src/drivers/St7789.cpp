@@ -140,7 +140,7 @@ void St7789::Uninit() {
 }
 
 void St7789::DrawPixel(uint16_t x, uint16_t y, uint32_t color) {
-  if ((x < 0) || (x >= Width) || (y < 0) || (y >= Height))
+  if ((x >= Width) || (y >= Height))
     return;
 
   SetAddrWindow(x, y, x + 1, y + 1);
