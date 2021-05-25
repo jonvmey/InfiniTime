@@ -24,7 +24,7 @@ void DeviceInformationService::Init() {
   ASSERT(res == 0);
 }
 
-int DeviceInformationService::OnDeviceInfoRequested(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt* ctxt) {
+int DeviceInformationService::OnDeviceInfoRequested(uint16_t /*conn_handle*/, uint16_t /*attr_handle*/, struct ble_gatt_access_ctxt* ctxt) {
   const char* str;
 
   switch (ble_uuid_u16(ctxt->chr->uuid)) {

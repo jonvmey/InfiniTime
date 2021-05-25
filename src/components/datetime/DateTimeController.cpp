@@ -9,7 +9,7 @@ DateTime::DateTime(System::SystemTask& systemTask) : systemTask {systemTask} {
 }
 
 void DateTime::SetTime(
-  uint16_t year, uint8_t month, uint8_t day, uint8_t dayOfWeek, uint8_t hour, uint8_t minute, uint8_t second, uint32_t systickCounter) {
+  uint16_t year, uint8_t month, uint8_t day, uint8_t /*dayOfWeek*/, uint8_t hour, uint8_t minute, uint8_t second, uint32_t systickCounter) {
   std::tm tm = {
     /* .tm_sec  = */ second,
     /* .tm_min  = */ minute,

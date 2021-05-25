@@ -103,7 +103,7 @@ int AlertNotificationClient::OnCharacteristicsDiscoveryEvent(uint16_t connection
   return 0;
 }
 
-int AlertNotificationClient::OnNewAlertSubcribe(uint16_t connectionHandle, const ble_gatt_error* error, ble_gatt_attr* attribute) {
+int AlertNotificationClient::OnNewAlertSubcribe(uint16_t connectionHandle, const ble_gatt_error* error, ble_gatt_attr* /*attribute*/) {
   if (error->status == 0) {
     NRF_LOG_INFO("ANS New alert subscribe OK");
   } else {

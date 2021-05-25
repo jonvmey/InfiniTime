@@ -159,8 +159,8 @@ void SpiMaster::PrepareTx(const volatile uint32_t bufferAddress, const volatile 
   spiBaseAddress->EVENTS_END = 0;
 }
 
-void SpiMaster::PrepareRx(const volatile uint32_t cmdAddress,
-                          const volatile size_t cmdSize,
+void SpiMaster::PrepareRx(const volatile uint32_t /*cmdAddress*/,
+                          const volatile size_t /*cmdSize*/,
                           const volatile uint32_t bufferAddress,
                           const volatile size_t size) {
   spiBaseAddress->TXD.PTR = 0;

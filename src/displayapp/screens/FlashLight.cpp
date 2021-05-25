@@ -69,6 +69,6 @@ bool FlashLight::Refresh() {
   return running;
 }
 
-bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+bool FlashLight::OnTouchEvent(Pinetime::Applications::TouchEvents /*event*/) {
   return true;
 }

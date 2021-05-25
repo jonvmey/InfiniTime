@@ -38,7 +38,7 @@ void BatteryInformationService::Init() {
   ASSERT(res == 0);
 }
 
-int BatteryInformationService::OnBatteryServiceRequested(uint16_t connectionHandle,
+int BatteryInformationService::OnBatteryServiceRequested(uint16_t /*connectionHandle*/,
                                                          uint16_t attributeHandle,
                                                          ble_gatt_access_ctxt* context) {
   if (attributeHandle == batteryLevelHandle) {

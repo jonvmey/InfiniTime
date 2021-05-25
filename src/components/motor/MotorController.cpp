@@ -26,6 +26,6 @@ void MotorController::SetDuration(uint8_t motorDuration) {
   app_timer_start(vibTimer, APP_TIMER_TICKS(motorDuration), NULL);
 }
 
-void MotorController::vibrate(void* p_context) {
+void MotorController::vibrate(void* /*p_context*/) {
   nrf_gpio_pin_set(pinMotor);
 }

@@ -44,7 +44,7 @@ void HeartRateService::Init() {
   ASSERT(res == 0);
 }
 
-int HeartRateService::OnHeartRateRequested(uint16_t connectionHandle, uint16_t attributeHandle, ble_gatt_access_ctxt* context) {
+int HeartRateService::OnHeartRateRequested(uint16_t /*connectionHandle*/, uint16_t attributeHandle, ble_gatt_access_ctxt* context) {
   if (attributeHandle == heartRateMeasurementHandle) {
     NRF_LOG_INFO("HEARTRATE : handle = %d", heartRateMeasurementHandle);
     uint8_t buffer[2] = {0, heartRateController.HeartRate()}; // [0] = flags, [1] = hr value
@@ -55,7 +55,7 @@ int HeartRateService::OnHeartRateRequested(uint16_t connectionHandle, uint16_t a
   return 0;
 }
 
-void HeartRateService::OnNewHeartRateValue(uint8_t heartRateValue) {
+void HeartRateService::OnNewHeartRateValue(uint8_t /*heartRateValue*/) {
   uint8_t buffer[2] = {0, heartRateController.HeartRate()}; // [0] = flags, [1] = hr value
   auto* om = ble_hs_mbuf_from_flat(buffer, 2);
 

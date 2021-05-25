@@ -143,11 +143,11 @@ bool Paddle::Refresh() {
   return running;
 }
 
-bool Paddle::OnTouchEvent(Pinetime::Applications::TouchEvents event) {
+bool Paddle::OnTouchEvent(Pinetime::Applications::TouchEvents /*event*/) {
   return true;
 }
 
-bool Paddle::OnTouchEvent(uint16_t x, uint16_t y) {
+bool Paddle::OnTouchEvent(uint16_t /*x*/, uint16_t y) {
   lv_obj_set_pos(
     paddle_image,
     0,

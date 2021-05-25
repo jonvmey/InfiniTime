@@ -21,7 +21,7 @@ void CurrentTimeService::Init() {
   ASSERT(res == 0);
 }
 
-int CurrentTimeService::OnTimeAccessed(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt* ctxt) {
+int CurrentTimeService::OnTimeAccessed(uint16_t /*conn_handle*/, uint16_t /*attr_handle*/, struct ble_gatt_access_ctxt* ctxt) {
 
   NRF_LOG_INFO("Setting time...");
 

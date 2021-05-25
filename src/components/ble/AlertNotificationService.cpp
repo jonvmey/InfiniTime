@@ -47,7 +47,7 @@ AlertNotificationService::AlertNotificationService(System::SystemTask& systemTas
     notificationManager {notificationManager} {
 }
 
-int AlertNotificationService::OnAlert(uint16_t conn_handle, uint16_t attr_handle, struct ble_gatt_access_ctxt* ctxt) {
+int AlertNotificationService::OnAlert(uint16_t /*conn_handle*/, uint16_t /*attr_handle*/, struct ble_gatt_access_ctxt* ctxt) {
   if (ctxt->op == BLE_GATT_ACCESS_OP_WRITE_CHR) {
     constexpr size_t stringTerminatorSize = 1; // end of string '\0'
     constexpr size_t headerSize = 3;

@@ -33,13 +33,13 @@ void debugpins_pulse(debugpins_pins pin) {
 #else
 void debugpins_init() {
 }
-void debugpins_set(debugpins_pins pin) {
+void debugpins_set(debugpins_pins /*pin*/) {
 }
 
-void debugpins_clear(debugpins_pins pin) {
+void debugpins_clear(debugpins_pins /*pin*/) {
 }
 
-void debugpins_pulse(debugpins_pins pin) {
+void debugpins_pulse(debugpins_pins /*pin*/) {
 }
 
 #endif
