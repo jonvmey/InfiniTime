@@ -11,7 +11,7 @@ Based on Ubuntu 18.04 with the following build dependencies:
 
 ## Run a container to build the project
 
-The `infinitime-build` image contains all the dependencies you need. The default `CMD` will compile sources found in `/sources`, so you need only mount your code. 
+The `infinitime-build` image contains all the dependencies you need. The default `CMD` will compile sources found in `/sources`, so you need only mount your code.
 
 This example  will build the firmware, generate the MCUBoot image and generate the DFU file. Outputs will be written to **<project_root>/build/output**:
 

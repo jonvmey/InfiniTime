@@ -1,8 +1,8 @@
-# Bluetooth Low-Energy : 
+# Bluetooth Low-Energy :
 ## Introduction
 This page describes the BLE implementation and API built in this firmware.
 
-**Note** : I'm a beginner in BLE related technologies and the information of this document reflect my current knowledge and understanding of the BLE stack. These informations might be erroneous or incomplete. Feel free to submit a PR if you think you can improve these.  
+**Note** : I'm a beginner in BLE related technologies and the information of this document reflect my current knowledge and understanding of the BLE stack. These informations might be erroneous or incomplete. Feel free to submit a PR if you think you can improve these.
 
 ## BLE Connection
 When starting the firmware start a BLE advertising : it send small messages that can be received by any *central* device in range. This allows the device to announce its presence to other devices.
@@ -16,7 +16,7 @@ If **CTS** is detected, it'll request the current time to the companion applicat
 ![BLE connection sequence diagram](ble/connection_sequence.png "BLE connection sequence diagram")
 
 ## BLE UUIDs
-When possible, InfiniTime tries to implement BLE services defined by the BLE specification. 
+When possible, InfiniTime tries to implement BLE services defined by the BLE specification.
 
 When the service does not exist in the BLE specification, InfiniTime implement custom services. As all BLE services, custom services are identified by a UUID. Here is how to define the UUID of custom services in InfiniTime:
 
@@ -32,7 +32,7 @@ The following custom services are implemented in InfiniTime:
    ```
     * Music Service :             00000000-78fc-48fe-8e23-433b3a1942d0
    ```
-   
+
  - Since InfiniTime 0.11:
    ```
      * Navigation Service :        00010000-78fc-48fe-8e23-433b3a1942d0

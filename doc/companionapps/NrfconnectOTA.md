@@ -5,7 +5,7 @@
  - Scanning, connect, disconnect
  - Time synchronization
  - OTA
- 
+
 InfiniTime implements the Nordic DFU protocol for the OTA functionality. NRFConnect also supports this protocol.
 
 # Demo

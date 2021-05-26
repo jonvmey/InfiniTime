@@ -85,7 +85,7 @@ void SystemTask::Work() {
   APP_GPIOTE_INIT(2);
 
   app_timer_init();
-  
+
   spi.Init();
   spiNorFlash.Init();
   spiNorFlash.Wakeup();

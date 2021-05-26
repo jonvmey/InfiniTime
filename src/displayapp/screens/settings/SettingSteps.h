@@ -17,15 +17,15 @@ namespace Pinetime {
 
           bool Refresh() override;
           void UpdateSelected(lv_obj_t *object, lv_event_t event);
-         
-        private:          
+
+        private:
 
           Controllers::Settings& settingsController;
 
           lv_obj_t * stepValue;
           lv_obj_t * btnPlus;
           lv_obj_t * btnMinus;
-          
+
       };
     }
   }

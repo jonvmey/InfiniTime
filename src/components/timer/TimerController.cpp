@@ -19,7 +19,7 @@ TimerController::TimerController(System::SystemTask& systemTask) : systemTask{sy
 
 void TimerController::Init() {
   app_timer_create(&timerAppTimer, APP_TIMER_MODE_SINGLE_SHOT, timerEnd);
-  
+
 }
 
 void TimerController::StartTimer(uint32_t duration) {
@@ -35,7 +35,7 @@ uint32_t TimerController::GetTimeRemaining() {
     return 0;
   }
   auto currentTicks = xTaskGetTickCount();
-  
+
   TickType_t deltaTicks = 0;
   if (currentTicks > endTicks) {
     deltaTicks = 0xffffffff - currentTicks;
@@ -43,12 +43,12 @@ uint32_t TimerController::GetTimeRemaining() {
   } else {
     deltaTicks = endTicks - currentTicks;
   }
-  
+
   return (static_cast<TickType_t>(deltaTicks) / static_cast<TickType_t>(configTICK_RATE_HZ)) * 1000;
 }
 
 void TimerController::timerEnd(void* p_context) {
-  
+
   auto* controller = static_cast<Controllers::TimerController*> (p_context);
   controller->timerRunning = false;
   controller->systemTask.PushMessage(System::SystemTask::Messages::OnTimerDone);

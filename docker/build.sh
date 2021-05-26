@@ -22,7 +22,7 @@ main() {
   local target="$1"
 
   mkdir -p "$TOOLS_DIR"
-  
+
   [[ ! -d "$TOOLS_DIR/$GCC_ARM_VER" ]] && GetGcc
   [[ ! -d "$TOOLS_DIR/$NRF_SDK_VER" ]] && GetNrfSdk
   [[ ! -d "$TOOLS_DIR/mcuboot" ]] && GetMcuBoot
@@ -31,7 +31,7 @@ main() {
 
   CmakeGenerate
   CmakeBuild $target
-  BUILD_RESULT=$? 
+  BUILD_RESULT=$?
   if [ "$DISABLE_POSTBUILD" != "true" -a "$BUILD_RESULT" == 0 ]; then
     source "$BUILD_DIR/post_build.sh"
   fi
@@ -72,7 +72,7 @@ CmakeBuild() {
   local target="$1"
   [[ -n "$target" ]] && target="--target $target"
   if cmake --build "$BUILD_DIR" --config $BUILD_TYPE $target -- -j$(nproc)
-    then return 0; else return 1; 
+    then return 0; else return 1;
   fi
 }
 

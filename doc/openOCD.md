@@ -6,7 +6,7 @@ It supports the **NRF52** (the CPU of the PineTime) and the **STLinkV2**, a chea
 It works on X86 computers, as well as ARM/ARM64 computers and SBC (like the RaspberryPi and Pine64 Pinebook Pro) !
 
 ## Installation
-We will build OpenOCD from sources, as packages from Linux distributions are most of the time outdated and do not support the NRF52 correctly. 
+We will build OpenOCD from sources, as packages from Linux distributions are most of the time outdated and do not support the NRF52 correctly.
 
  - Fetch the sources from GIT, and build and install it:
 

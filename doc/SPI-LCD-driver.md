@@ -4,11 +4,11 @@ The LCD controller that drive the display of the Pinetime is the Sitronix ST7789
 - an on-chip display data RAM that can store the whole framebuffer
 - partial screen update
 - hardware assisted vertical scrolling
-- interrupt pin, allowing to drive the display with DMA and IRQ 
+- interrupt pin, allowing to drive the display with DMA and IRQ
 - ...
 
 When you want to write a device driver for a specific component, its datasheet is your holy bible. This document contains a lot of information about the chip, its specification, characteristics, features and functionalities.
-Luckily for us, the datasheet of the ST7789 is great! It contains everything we need to write a nice driver for our beloved Pinetime.  
+Luckily for us, the datasheet of the ST7789 is great! It contains everything we need to write a nice driver for our beloved Pinetime.
 
 In this document, I'll try to explain the process I've followed to write a device driver for the LCD. There were multiple iterations:
 - First, I tried to find the correct initialization sequence so that the controller is configured correctly according to the hardware configuration;

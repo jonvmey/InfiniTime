@@ -56,7 +56,7 @@ It's totally normal for a PR to need some more work even after it was created, t
 
 # Coding convention
 ## Language
-The language of this project is **C++**, and all new code must be written in C++. (Modern) C++ provides a lot of useful tools and functionalities that are beneficial for embedded software development like `constexpr`, `template` and anything that provides zero-cost abstraction.  
+The language of this project is **C++**, and all new code must be written in C++. (Modern) C++ provides a lot of useful tools and functionalities that are beneficial for embedded software development like `constexpr`, `template` and anything that provides zero-cost abstraction.
 
 It's OK to include C code if this code comes from another library like FreeRTOS, NimBLE, LVGL or the NRF-SDK.
 

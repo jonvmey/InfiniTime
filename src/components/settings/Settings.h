@@ -86,12 +86,12 @@ namespace Pinetime {
         return settings.brightLevel;
       };
 
-      void SetStepsGoal( uint32_t goal ) { 
-        if ( goal != settings.stepsGoal ) 
+      void SetStepsGoal( uint32_t goal ) {
+        if ( goal != settings.stepsGoal )
           settingsChanged = true;
-        settings.stepsGoal = goal; 
+        settings.stepsGoal = goal;
       };
-      
+
       uint32_t GetStepsGoal() const { return settings.stepsGoal; };
 
     private:

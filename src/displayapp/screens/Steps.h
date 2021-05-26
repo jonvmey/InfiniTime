@@ -20,9 +20,9 @@ namespace Pinetime {
           ~Steps() override;
 
           bool Refresh() override;
-          
 
-        private:          
+
+        private:
 
           Controllers::MotionController& motionController;
           Controllers::Settings& settingsController;

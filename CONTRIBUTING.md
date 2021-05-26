@@ -2,14 +2,14 @@ This contribution guide is in progress, improvements are welcome.
 
 ### Code style
 
-Any C++ code PRs should aim to follow the style of existing code in the project. 
+Any C++ code PRs should aim to follow the style of existing code in the project.
 
-Using an autoformatter is heavily recommended, but make sure it's configured properly. 
+Using an autoformatter is heavily recommended, but make sure it's configured properly.
 
-There's currently preconfigured autoformatter rules for: 
+There's currently preconfigured autoformatter rules for:
 
   * CLion (IntelliJ) in .idea/codeStyles/Project.xml
-  
+
 You can use those to configure your own IDE if it's not already on the list.
 
 #### Linting errors and compiler warnings
